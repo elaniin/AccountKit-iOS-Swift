@@ -7,17 +7,53 @@
 //
 
 import UIKit
+import AccountKit
 
-class ViewController: UIViewController {
 
+
+class ViewController: UIViewController{
+    
+    var accountKit: AKFAccountKit!
+
+    @IBOutlet weak var accountID: UILabel!
+    @IBOutlet weak var labeltype: UILabel!
+    @IBOutlet weak var phoneornumber: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        // initialize Account Kit
+        if accountKit == nil {
+            
+            //specify AKFResponseType.AccessToken
+            self.accountKit = AKFAccountKit(responseType: AKFResponseType.AccessToken)
+            accountKit.requestAccount{
+                (account, error) -> Void in
+                
+                self.accountID.text = account?.accountID
+                if account?.emailAddress?.characters.count > 0 {
+                    //if the user is logged with email
+                    self.labeltype.text = "Email Address"
+                    self.phoneornumber.text = account!.emailAddress
+                    
+                }
+                else if account?.phoneNumber?.phoneNumber != nil {
+                    //if the user is logged with phone
+                    self.labeltype.text = "Phone Number"
+                    self.phoneornumber.text = account!.phoneNumber?.stringRepresentation()
+                }
+                
+                
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+                
+            }
+            
+        }
+    }
+    @IBAction func logout(sender: AnyObject) {
+        //You can invoke the logOut method to log a user out of Account Kit.
+        accountKit.logOut()
+        dismissViewControllerAnimated(true, completion: nil)
+        
     }
 
 

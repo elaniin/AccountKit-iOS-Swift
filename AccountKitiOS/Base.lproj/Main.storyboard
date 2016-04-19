@@ -1,25 +1,188 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="AccountKitiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebv-uu-HAH">
+                                <rect key="frame" x="42" y="254" width="235" height="40"/>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.5568627451" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="I0e-zK-Aq1"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Login with Phone"/>
+                                <connections>
+                                    <action selector="loginWithPhone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UEz-hz-5pW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNy-y9-Y1P">
+                                <rect key="frame" x="42" y="201" width="235" height="40"/>
+                                <color key="backgroundColor" red="0.32549019607843138" green="0.55686274509803924" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8pt-W1-TGL"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Login with Email"/>
+                                <connections>
+                                    <action selector="loginWithEmail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X7B-uR-bLJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This example shows you how to implement Facebook AccountKit in iOS using Swift." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usp-Su-LYT">
+                                <rect key="frame" x="19" y="90" width="280" height="45"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login with AccountKit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8k-fM-cPu">
+                                <rect key="frame" x="0.0" y="49" width="320" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="lce-Ok-X8m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ebv-uu-HAH" firstAttribute="top" secondItem="FNy-y9-Y1P" secondAttribute="bottom" constant="13" id="2OI-Tb-Fcv"/>
+                            <constraint firstItem="T8k-fM-cPu" firstAttribute="centerX" secondItem="FNy-y9-Y1P" secondAttribute="centerX" id="3bE-xA-q8o"/>
+                            <constraint firstItem="T8k-fM-cPu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="6c6-jc-C45"/>
+                            <constraint firstItem="FNy-y9-Y1P" firstAttribute="trailing" secondItem="ebv-uu-HAH" secondAttribute="trailing" id="JJH-ty-eAg"/>
+                            <constraint firstItem="T8k-fM-cPu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MNZ-K4-qWE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ebv-uu-HAH" secondAttribute="bottom" constant="274" id="NM7-n7-WZc"/>
+                            <constraint firstItem="FNy-y9-Y1P" firstAttribute="leading" secondItem="ebv-uu-HAH" secondAttribute="leading" id="RHZ-p2-wuF"/>
+                            <constraint firstItem="FNy-y9-Y1P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="SmL-zs-szg"/>
+                            <constraint firstItem="usp-Su-LYT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="iMP-Wu-ZcW"/>
+                            <constraint firstItem="usp-Su-LYT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="mZ4-Kj-452"/>
+                            <constraint firstItem="usp-Su-LYT" firstAttribute="centerX" secondItem="FNy-y9-Y1P" secondAttribute="centerX" id="y84-m4-JFl"/>
+                            <constraint firstItem="FNy-y9-Y1P" firstAttribute="top" secondItem="usp-Su-LYT" secondAttribute="bottom" constant="66" id="yqG-SW-W24"/>
+                            <constraint firstAttribute="trailing" secondItem="T8k-fM-cPu" secondAttribute="trailing" id="zGg-Aa-7gM"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ffe-TY-MSF"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="bIX-TX-laM" kind="presentation" identifier="showhome" id="pPg-Dz-Ipf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="181" y="322"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ehn-tj-kys">
+            <objects>
+                <viewController id="bIX-TX-laM" customClass="ViewController" customModule="AccountKitiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3bI-FI-QWG"/>
+                        <viewControllerLayoutGuide type="bottom" id="tqV-l2-imi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0cG-A1-DoP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKc-o7-LkL">
+                                <rect key="frame" x="0.0" y="49" width="320" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="nIE-kd-PfI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This example shows you how to implement Facebook AccountKit in iOS using Swift." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEC-hh-Zky">
+                                <rect key="frame" x="19" y="90" width="280" height="45"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zru-YM-Ifp">
+                                <rect key="frame" x="113" y="474" width="94" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="bIX-TX-laM" eventType="touchUpInside" id="DC2-Bt-weN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSw-WY-fTK">
+                                <rect key="frame" x="45" y="178" width="229" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.32156862749999998" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCOUNT ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="067-or-q35">
+                                <rect key="frame" x="45" y="160" width="229" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL / PHONE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dlf-n3-GJE">
+                                <rect key="frame" x="45" y="207" width="229" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="foo-86-Qfd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4H7-KT-9Ig">
+                                <rect key="frame" x="45" y="227" width="229" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.32156862749999998" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cEC-hh-Zky" firstAttribute="top" secondItem="3bI-FI-QWG" secondAttribute="bottom" constant="70" id="2Rg-g7-EGg"/>
+                            <constraint firstItem="PSw-WY-fTK" firstAttribute="top" secondItem="cEC-hh-Zky" secondAttribute="bottom" constant="43" id="4kt-Dg-hns"/>
+                            <constraint firstItem="vKc-o7-LkL" firstAttribute="top" secondItem="3bI-FI-QWG" secondAttribute="bottom" constant="29" id="AOH-OO-OB5"/>
+                            <constraint firstItem="Dlf-n3-GJE" firstAttribute="top" secondItem="PSw-WY-fTK" secondAttribute="bottom" constant="8" symbolic="YES" id="Azv-rU-TNq"/>
+                            <constraint firstItem="vKc-o7-LkL" firstAttribute="centerX" secondItem="067-or-q35" secondAttribute="centerX" id="CoW-HW-aeG"/>
+                            <constraint firstItem="4H7-KT-9Ig" firstAttribute="centerX" secondItem="Zru-YM-Ifp" secondAttribute="centerX" id="FrO-Is-u5i"/>
+                            <constraint firstAttribute="trailing" secondItem="vKc-o7-LkL" secondAttribute="trailing" id="HtK-07-cGQ"/>
+                            <constraint firstItem="067-or-q35" firstAttribute="top" secondItem="vKc-o7-LkL" secondAttribute="bottom" constant="69" id="IRv-fb-G0I"/>
+                            <constraint firstItem="cEC-hh-Zky" firstAttribute="leading" secondItem="0cG-A1-DoP" secondAttribute="leadingMargin" constant="3" id="Mq2-Tk-pPe"/>
+                            <constraint firstItem="Dlf-n3-GJE" firstAttribute="top" secondItem="067-or-q35" secondAttribute="bottom" constant="26" id="QnX-Ag-Uss"/>
+                            <constraint firstItem="067-or-q35" firstAttribute="top" secondItem="cEC-hh-Zky" secondAttribute="bottom" constant="25" id="Vlc-nm-Lts"/>
+                            <constraint firstItem="067-or-q35" firstAttribute="trailing" secondItem="PSw-WY-fTK" secondAttribute="trailing" id="Wx0-qn-Kwp"/>
+                            <constraint firstItem="PSw-WY-fTK" firstAttribute="leading" secondItem="Dlf-n3-GJE" secondAttribute="leading" id="Yon-PI-dnN"/>
+                            <constraint firstItem="067-or-q35" firstAttribute="leading" secondItem="0cG-A1-DoP" secondAttribute="leadingMargin" constant="29" id="Zoi-A3-Lpi"/>
+                            <constraint firstItem="Dlf-n3-GJE" firstAttribute="leading" secondItem="4H7-KT-9Ig" secondAttribute="leading" id="fH1-Kj-9zZ"/>
+                            <constraint firstItem="tqV-l2-imi" firstAttribute="top" secondItem="Zru-YM-Ifp" secondAttribute="bottom" constant="64" id="fKs-7N-eLj"/>
+                            <constraint firstItem="Zru-YM-Ifp" firstAttribute="leading" secondItem="0cG-A1-DoP" secondAttribute="leadingMargin" constant="97" id="gIE-aq-vwU"/>
+                            <constraint firstItem="Dlf-n3-GJE" firstAttribute="trailing" secondItem="4H7-KT-9Ig" secondAttribute="trailing" id="hAc-kP-Vfe"/>
+                            <constraint firstItem="067-or-q35" firstAttribute="leading" secondItem="PSw-WY-fTK" secondAttribute="leading" id="iWF-Em-S8Y"/>
+                            <constraint firstItem="cEC-hh-Zky" firstAttribute="centerX" secondItem="067-or-q35" secondAttribute="centerX" id="isR-hC-Ls1"/>
+                            <constraint firstItem="PSw-WY-fTK" firstAttribute="trailing" secondItem="Dlf-n3-GJE" secondAttribute="trailing" id="j8K-h4-sHF"/>
+                            <constraint firstItem="4H7-KT-9Ig" firstAttribute="top" secondItem="PSw-WY-fTK" secondAttribute="bottom" constant="28" id="jGM-H6-uYX"/>
+                            <constraint firstItem="vKc-o7-LkL" firstAttribute="leading" secondItem="0cG-A1-DoP" secondAttribute="leading" id="p2q-K5-lZP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accountID" destination="PSw-WY-fTK" id="s8B-7P-QDB"/>
+                        <outlet property="labeltype" destination="Dlf-n3-GJE" id="4Dz-hI-7qS"/>
+                        <outlet property="phoneornumber" destination="4H7-KT-9Ig" id="IDZ-zP-enC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OgW-hm-JIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="674" y="322"/>
         </scene>
     </scenes>
 </document>

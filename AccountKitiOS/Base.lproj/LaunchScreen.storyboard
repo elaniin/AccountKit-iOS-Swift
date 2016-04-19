@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +16,35 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AcccountKit iOS Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq1-Cr-i8q">
+                                <rect key="frame" x="153" y="262" width="295" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="zvy-ll-KMU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elaniin Digital" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMX-Mg-026">
+                                <rect key="frame" x="158" y="298" width="284" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="RpH-Wa-fnL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="MMX-Mg-026" secondAttribute="bottom" constant="269" id="InW-jh-rE4"/>
+                            <constraint firstItem="Tq1-Cr-i8q" firstAttribute="centerX" secondItem="MMX-Mg-026" secondAttribute="centerX" id="YlM-Rk-ftq"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Tq1-Cr-i8q" secondAttribute="bottom" constant="296" id="bmF-Xs-J2U"/>
+                            <constraint firstItem="Tq1-Cr-i8q" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cKP-af-gOp"/>
+                            <constraint firstItem="MMX-Mg-026" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="278" id="e0G-La-Lpq"/>
+                            <constraint firstItem="Tq1-Cr-i8q" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="242" id="mD1-Ut-erm"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

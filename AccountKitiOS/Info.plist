@@ -30,6 +30,24 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>FacebookDisplayName</key>
+	<string>Elaniin Developer</string>
+	<key>AccountKitFacebookAppEventsEnabled</key>
+	<integer>1</integer>
+	<key>FacebookAppID</key>
+	<string>465871913602533
+</string>
+	<key>AccountKitClientToken</key>
+	<string>b3f19a50f37af1e79c5bc59c02d59d90</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>ak465871913602533</string>
+			</array>
+		</dict>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

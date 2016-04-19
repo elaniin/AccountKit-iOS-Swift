@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230F39D31CC5D85200B53C9D /* AccountKitStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 230F39D21CC5D85200B53C9D /* AccountKitStrings.bundle */; };
 		23C7583F1CC590AD009B64B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C7583E1CC590AD009B64B6 /* AppDelegate.swift */; };
 		23C758411CC590AD009B64B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C758401CC590AD009B64B6 /* ViewController.swift */; };
 		23C758441CC590AD009B64B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C758421CC590AD009B64B6 /* Main.storyboard */; };
 		23C758461CC590AD009B64B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C758451CC590AD009B64B6 /* Assets.xcassets */; };
 		23C758491CC590AD009B64B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C758471CC590AD009B64B6 /* LaunchScreen.storyboard */; };
+		23C7585D1CC5A03C009B64B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C7585C1CC5A03C009B64B6 /* LoginViewController.swift */; };
+		23C758611CC5A17C009B64B6 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C758601CC5A17C009B64B6 /* AccountKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		230F39D01CC5D72100B53C9D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		230F39D11CC5D72100B53C9D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		230F39D21CC5D85200B53C9D /* AccountKitStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AccountKitStrings.bundle; sourceTree = "<group>"; };
 		23C7583B1CC590AD009B64B6 /* AccountKitiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountKitiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C7583E1CC590AD009B64B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23C758401CC590AD009B64B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,9 @@
 		23C758451CC590AD009B64B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23C758481CC590AD009B64B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23C7584A1CC590AD009B64B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23C758501CC590F8009B64B6 /* AccountKitiOS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AccountKitiOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		23C7585C1CC5A03C009B64B6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		23C758601CC5A17C009B64B6 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23C758611CC5A17C009B64B6 /* AccountKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,8 +64,12 @@
 		23C7583D1CC590AD009B64B6 /* AccountKitiOS */ = {
 			isa = PBXGroup;
 			children = (
+				23C758501CC590F8009B64B6 /* AccountKitiOS-Bridging-Header.h */,
+				230F39D21CC5D85200B53C9D /* AccountKitStrings.bundle */,
+				23C758601CC5A17C009B64B6 /* AccountKit.framework */,
 				23C7583E1CC590AD009B64B6 /* AppDelegate.swift */,
 				23C758401CC590AD009B64B6 /* ViewController.swift */,
+				23C7585C1CC5A03C009B64B6 /* LoginViewController.swift */,
 				23C758421CC590AD009B64B6 /* Main.storyboard */,
 				23C758451CC590AD009B64B6 /* Assets.xcassets */,
 				23C758471CC590AD009B64B6 /* LaunchScreen.storyboard */,
@@ -96,6 +110,7 @@
 				TargetAttributes = {
 					23C7583A1CC590AD009B64B6 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = F9TRLMRFN4;
 					};
 				};
 			};
@@ -125,6 +140,7 @@
 				23C758491CC590AD009B64B6 /* LaunchScreen.storyboard in Resources */,
 				23C758461CC590AD009B64B6 /* Assets.xcassets in Resources */,
 				23C758441CC590AD009B64B6 /* Main.storyboard in Resources */,
+				230F39D31CC5D85200B53C9D /* AccountKitStrings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23C7585D1CC5A03C009B64B6 /* LoginViewController.swift in Sources */,
 				23C758411CC590AD009B64B6 /* ViewController.swift in Sources */,
 				23C7583F1CC590AD009B64B6 /* AppDelegate.swift in Sources */,
 			);
@@ -147,6 +164,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				23C758431CC590AD009B64B6 /* Base */,
+				230F39D01CC5D72100B53C9D /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -155,6 +173,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				23C758481CC590AD009B64B6 /* Base */,
+				230F39D11CC5D72100B53C9D /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -249,10 +268,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AccountKitiOS",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = AccountKitiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elaniin.AccountKitiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AccountKitiOS/AccountKitiOS-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -260,10 +287,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AccountKitiOS",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = AccountKitiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elaniin.AccountKitiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AccountKitiOS/AccountKitiOS-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -286,6 +321,7 @@
 				23C7584F1CC590AD009B64B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
