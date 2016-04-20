@@ -1,5 +1,5 @@
-# Facebook AccountKit using Swift
-This is a basic Xcode project based in __Swift__ that help you to understand how __"Facebook AccountKit"__ works, you can use this project as a basic for a new project or you can take part of the code to facilitate the integration into an existing project.
+# Facebook Account Kit using Swift
+This is a basic Xcode project based in __Swift__ that help you to understand how __"Facebook Account Kit"__ works, you can use this project as a basic for a new project or you can take part of the code to facilitate the integration into an existing project.
 
 ![alt tag](https://elaniin.com/github/ACKI1.PNG) ![alt tag](https://elaniin.com/github/ACKI2.PNG) ![alt tag](https://elaniin.com/github/ACKI3.PNG)
 
@@ -9,7 +9,7 @@ __Requirements__
 * Xcode 7.0+
 
 #Español
-Este es un proyecto creado en Xcode con Swift que te ayuda a comprender como "Facebook AccountKit" funciona, puedes utilizar este proyecto como base de un proyecto nuevo o puedes tomar parte del codigo para que se te facilite la integración en un proyecto existente.
+Este es un proyecto creado en Xcode con Swift que te ayuda a comprender como "Facebook Account Kit" funciona, puedes utilizar este proyecto como base de un proyecto nuevo o puedes tomar parte del codigo para que se te facilite la integración en un proyecto existente.
 
 Puedes descargar el proyecto, probarlo en el emulador para comprender el flujo sin necesidad de hacer ningun cambio en el codigo.
 
